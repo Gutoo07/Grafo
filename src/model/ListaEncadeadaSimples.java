@@ -49,7 +49,7 @@ public class ListaEncadeadaSimples<T> {
 		while(!buffer.getValor().equals(router)) {			
 			buffer = buffer.getProximo();
 		}		
-		return temp;
+		return buffer;
 	}
 	public int index (T elemento) throws IllegalArgumentException {
 		if (this.inicio == null) {
