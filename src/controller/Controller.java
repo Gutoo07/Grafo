@@ -18,7 +18,7 @@ public class Controller {
 		g.add(1,4);
 		g.add(2,3);
 		g.add(3,4); */
-		g.add(4);	
+		g.add("4");	
 		g.test();
 	}
 }

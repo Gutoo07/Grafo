@@ -46,15 +46,7 @@ public class ListaEncadeadaSimples<T> {
 			return null;
 		}
 		No<T> buffer = this.inicio;
-		No<T> temp = null;
-		while(buffer != null) {
-			System.out.println(buffer.getValor() == );
-			if(buffer.getValor() == (router)) {
-				temp = buffer;
-				System.out.println("UEPAAA");
-				break;
-				
-			}
+		while(!buffer.getValor().equals(router)) {			
 			buffer = buffer.getProximo();
 		}		
 		return temp;
