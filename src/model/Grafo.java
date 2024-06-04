@@ -17,8 +17,8 @@ public class Grafo<T> {
 		//map.put(source, new LinkedList<T>());
 		lista.append(source);
 	}
-	public void test() {
-		System.out.println(lista.get("4"));
+	public String test() {
+		return lista.toString();
 	}
 	public void add (T source, T  destination) {
 		/*if (!map.containsKey(source)) {
@@ -31,12 +31,18 @@ public class Grafo<T> {
 		map.get(destination).add(source);*/
 		if (lista.get(source) == null) {
 			lista.append(source);
+			System.out.println("router " + source + " criado");
 		}
 		if (lista.get(destination) == null) {
 			lista.append(destination);
+			System.out.println("router  " + destination + " criado");
 		}
 		lista.get(source).setLink(destination);
 		lista.get(destination).setLink(source);
+		System.out.println("source " + source + " linkada com destination " + destination);
+	}
+	public void remove(T router) {
+		lista.remove(router);
 	}
 	public boolean has (T s) {
 		//return map.containsKey(s);
@@ -56,12 +62,12 @@ public class Grafo<T> {
 		//return map.keySet().size();
 		return lista.total();
 	}
-	public void remove(T remover) {
+	/*public void remove(T remover) {
 		if (lista.get(remover) == null) {
 			throw new IllegalArgumentException("Router inexistente.");
 		}
 		lista.remove(remover);
-	}
+	}*/
 	//Escrever um output do grafo
 	/*@Override public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -75,4 +81,7 @@ public class Grafo<T> {
 		}
 		return (builder.toString());
 	}*/
+	public void output() {
+		lista.output();
+	}	
 }

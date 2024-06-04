@@ -3,7 +3,7 @@ package model;
 public class No<T> {
 	private T valor;
 	private No<T> proximo;
-	private ListaEncadeadaSimples listaLinkada = null;
+	private ListaEncadeadaSimples listaLinkada = new ListaEncadeadaSimples();
 	
 	public No (T valor) {
 		this.valor = valor;
@@ -36,3 +36,4 @@ public class No<T> {
 			return valor.toString();
 		}
 }
+	
